@@ -17,6 +17,13 @@ export class AppComponent {
   Login() {
     console.log(this.user)
     const {email,password} = this.user
+    this.auth.login(email,password).then(res =>{
+      console.log("Login",res)
+    })
+  }
+  SignUp() {
+    console.log(this.user)
+    const {email,password} = this.user
     this.auth.signup(email,password).then(res =>{
       console.log("Sign up",res)
     })
@@ -26,6 +33,12 @@ export class AppComponent {
     const {email,password} = this.user
     this.auth.loginGoogle(email,password).then(res =>{
       console.log("Sign up",res)
+    })
+  }
+  
+  getUserLogged () {
+    this.auth.getUserLogged().subscribe(res=>{
+      console.log(res?.email);
     })
   }
 }

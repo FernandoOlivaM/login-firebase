@@ -35,4 +35,13 @@ export class AuthService {
       return null;
     }
   }
+  getUserLogged(){
+    console.log(this.FireAuth.authState)
+    return this.FireAuth.authState;
+    
+  }
+  logOut(){
+    this.FireAuth.signOut;
+  }
+
 }

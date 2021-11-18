@@ -1,0 +1,14 @@
+<!-- Image and text -->
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+        <img src="https://pay.btc.gt/LocalStorage/7d6ac30b-5d99-4681-88f5-e89f11ef810a-coincaexlogovertical.png" width="100" height="30" class="d-inline-block align-top" alt="">
+    </a>
+    <a class="navbar-brand" href="#"*ngIf="userLogged|async as user">
+        Bienvenido, {{user.email}}
+    </a>
+    <a class="navbar-brand" href="#"*ngIf="userLogged|async as user">
+        <label>Log out</label>
+        <button class="btn btn-info m2" (click)="LogOut()">
+        </button>
+    </a>
+</nav>

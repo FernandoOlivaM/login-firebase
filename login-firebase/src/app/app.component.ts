@@ -21,4 +21,11 @@ export class AppComponent {
       console.log("Sign up",res)
     })
   }
+  LoginGoogle() {
+    console.log(this.user)
+    const {email,password} = this.user
+    this.auth.loginGoogle(email,password).then(res =>{
+      console.log("Sign up",res)
+    })
+  }
 }

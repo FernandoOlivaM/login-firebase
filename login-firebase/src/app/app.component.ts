@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'login-firebase';
+  user = {
+    email : '',
+    password:''
+  }
+  Login() {
+    console.log(this.user)
+  }
 }

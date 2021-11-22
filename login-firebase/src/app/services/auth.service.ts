@@ -26,6 +26,15 @@ export class AuthService {
       return null;
     }
   }
+  async forgotPassword(email:string){
+    try{
+      return await this.FireAuth.sendPasswordResetEmail(email);
+    }
+    catch(err){
+      console.log("Error google ", err);
+      return null;
+    }
+  }
   async loginGoogle(email:string,password:string){
     try{
       return await this.FireAuth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
@@ -43,5 +52,4 @@ export class AuthService {
   logOut(){
     this.FireAuth.signOut;
   }
-
 }

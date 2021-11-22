@@ -9,10 +9,11 @@
       <input class="form-control" type="email" placeholder="your email" [(ngModel)]="user.email">
       <label>Password</label>
       <input class="form-control"  type="password" placeholder="your password"[(ngModel)]="user.password">
-      
       <button class="btn btn-primary btn-block"(click) = "Login()">Login</button>
-      <button class="btn btn-info btn-block"(click) = "LoginGoogle()">Login with Google</button>
+      <label> Forgot your password? <a href="#" (click)="ForgotPassword()">Forgot password</a> </label> <br>
       <label> Do not have an account? <a href="#" (click)="SignUp()">Sign up</a></label>
+      <button class="btn btn-info btn-block"(click) = "LoginGoogle()">Login with Google</button>
+      
   </div>
 </div>
   

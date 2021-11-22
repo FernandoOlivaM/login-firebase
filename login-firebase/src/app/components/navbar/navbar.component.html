@@ -7,8 +7,8 @@
         Bienvenido, {{user.email}}
     </a>
     <a class="navbar-brand" href="#"*ngIf="userLogged|async as user">
-        <label>Log out</label>
         <button class="btn btn-info m2" (click)="LogOut()">
+            Log out
         </button>
     </a>
 </nav>

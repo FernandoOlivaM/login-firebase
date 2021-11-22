@@ -41,4 +41,11 @@ export class AppComponent {
       console.log(res?.email);
     })
   }
+  ForgotPassword () {
+    const {email} = this.user
+    this.auth.forgotPassword(email).then(res =>{
+      console.log("Sign up",res)
+    })
+  }
+
 }
